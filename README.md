@@ -10,11 +10,7 @@ Local vector embeddings using Google's [EmbeddingGemma 300M](https://ai.google.d
 npm install @kessler/gemma-embedding
 ```
 
-For faster inference in Node.js, install the native ONNX runtime (optional):
-
-```bash
-npm install onnxruntime-node
-```
+In Node.js, `onnxruntime-node` is automatically installed for faster native inference. Browser environments use WASM instead.
 
 ## Usage
 
