@@ -1,0 +1,55 @@
+{
+  "name": "@kessler/gemma-embedding",
+  "version": "1.0.0",
+  "description": "Node.js wrapper for EmbeddingGemma — local vector embeddings for semantic search",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "gemma",
+    "embedding",
+    "embeddings",
+    "vector",
+    "semantic-search",
+    "onnx",
+    "transformers",
+    "local"
+  ],
+  "author": "Yaniv Kessler",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.30.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kessler/gemma-embedding.git"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.0.1"
+  },
+  "peerDependencies": {
+    "onnxruntime-node": ">=1.20.0"
+  },
+  "peerDependenciesMeta": {
+    "onnxruntime-node": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.1.1"
+  }
+}

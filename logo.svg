@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="gemma" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285f4"/>
+      <stop offset="50%" style="stop-color:#9b72cb"/>
+      <stop offset="100%" style="stop-color:#d96570"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4285f4;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#9b72cb;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" rx="12" fill="url(#bg)"/>
+
+  <!-- Decorative dots representing vector space (background) -->
+  <g opacity="0.15">
+    <circle cx="50" cy="40" r="3" fill="#4285f4"/>
+    <circle cx="120" cy="70" r="2" fill="#9b72cb"/>
+    <circle cx="80" cy="150" r="2.5" fill="#d96570"/>
+    <circle cx="700" cy="50" r="2" fill="#4285f4"/>
+    <circle cx="750" cy="130" r="3" fill="#9b72cb"/>
+    <circle cx="680" cy="170" r="2" fill="#d96570"/>
+    <circle cx="720" cy="90" r="1.5" fill="#4285f4"/>
+    <circle cx="60" cy="100" r="1.5" fill="#9b72cb"/>
+  </g>
+
+  <!-- Gem icon -->
+  <g transform="translate(140, 58)">
+    <!-- Gem body -->
+    <polygon points="42,0 72,28 42,80 12,28" fill="url(#gemma)" opacity="0.9"/>
+    <polygon points="42,0 72,28 42,28" fill="#fff" opacity="0.15"/>
+    <line x1="42" y1="0" x2="42" y2="80" stroke="#fff" stroke-width="0.5" opacity="0.2"/>
+    <!-- Sparkle -->
+    <g transform="translate(76, -4)" opacity="0.9">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#f9d71c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#f9d71c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#f9d71c" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-5" x2="-5" y2="5" stroke="#f9d71c" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="250" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="url(#gemma)">gemma-embedding</text>
+
+  <!-- Subtitle with humor -->
+  <text x="250" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#8892b0">turning words into 768 numbers since 2026</text>
+
+  <!-- Vector visualization: word going in, numbers coming out -->
+  <g transform="translate(250, 135)">
+    <!-- Input word -->
+    <rect x="0" y="0" width="60" height="26" rx="5" fill="#4285f4" opacity="0.2" stroke="#4285f4" stroke-width="1"/>
+    <text x="30" y="18" font-family="monospace" font-size="12" fill="#4285f4" text-anchor="middle">"cat"</text>
+
+    <!-- Arrow -->
+    <line x1="70" y1="13" x2="120" y2="13" stroke="url(#arrow)" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="120,7 132,13 120,19" fill="#9b72cb" opacity="0.8"/>
+
+    <!-- Output numbers -->
+    <rect x="142" y="0" width="300" height="26" rx="5" fill="#9b72cb" opacity="0.1" stroke="#9b72cb" stroke-width="1"/>
+    <text x="292" y="18" font-family="monospace" font-size="11" fill="#9b72cb" text-anchor="middle">[0.182, -0.041, 0.337, ... 768 more]</text>
+  </g>
+</svg>
